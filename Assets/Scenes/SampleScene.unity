@@ -291,7 +291,8 @@ GameObject:
   m_Component:
   - component: {fileID: 286020349}
   - component: {fileID: 286020348}
-  - component: {fileID: 286020347}
+  - component: {fileID: 286020351}
+  - component: {fileID: 286020350}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -299,19 +300,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &286020347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286020346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9edd2b546ca78d4aa363939221949f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 100
 --- !u!212 &286020348
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -382,6 +370,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286020350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286020346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7437e983dc2e69844a48279963f30b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 50
+--- !u!50 &286020351
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286020346}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &371805112
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,10 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7afe8aeb62e5442b8996198c704f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherObject: {fileID: 1740404318}
-  jointDistance: 2
-  maxDistanceOnly: 1
-  distanceJoint: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,8 +858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e56a53085c48a5409529b54ab895570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectA: {fileID: 0}
-  objectB: {fileID: 0}
+  objectA: {fileID: 1740404315}
+  objectB: {fileID: 286020346}
 --- !u!1 &1740404315
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,7 +873,6 @@ GameObject:
   - component: {fileID: 1740404318}
   - component: {fileID: 1740404321}
   - component: {fileID: 1740404323}
-  - component: {fileID: 1740404324}
   m_Layer: 0
   m_Name: shovel
   m_TagString: Untagged
@@ -1003,20 +1026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 286020349}
-  forceAmount: 10
---- !u!114 &1740404324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740404315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9edd2b546ca78d4aa363939221949f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
+  forceAmount: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

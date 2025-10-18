@@ -1,25 +1,15 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class FollowTargetForce : MonoBehaviour
+public class FollowMouse : MonoBehaviour
 {
-    public Transform target;          // The object to follow
-    public float forceAmount = 10f;   // Strength of the force
-    private Rigidbody2D rb;
+    public float moveSpeed = 10f;  // Speed of following
 
-    void Start()
+    void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
+        // Get mouse position in world coordinates
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-    void FixedUpdate()
-    {
-        if (target == null) return; // Safety check
-
-        Vector2 targetPosition = target.position;
-        Vector2 direction = (targetPosition - rb.position).normalized;
-
-        // Apply force toward target object
-        rb.AddForce(direction * forceAmount);
+        // Move object towards mouse position at moveSpeed
+        transform.position = Vector2.MoveTowards(transform.position, mousePosition, moveSpeed * Time.deltaTime);
     }
 }
