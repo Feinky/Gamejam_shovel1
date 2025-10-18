@@ -1,0 +1,4 @@
+repository "鏟子男娘/鏟子男娘@33261462757593@cloud"
+  path "/"
+    br "/main"
+    co "/main"
