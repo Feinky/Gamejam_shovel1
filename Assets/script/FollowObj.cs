@@ -1,25 +1,22 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class FollowTargetForce : MonoBehaviour
+public class FollowTargetDirection : MonoBehaviour
 {
-    public Transform target;          // The object to follow
-    public float forceAmount = 10f;   // Strength of the force
-    private Rigidbody2D rb;
+    public Transform target;
+    public float rotateSpeed = 5f;
 
-    void Start()
+    void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
+        if (target == null) return;
 
-    void FixedUpdate()
-    {
-        if (target == null) return; // Safety check
+        // 計算方向
+        Vector2 direction = (target.position - transform.position).normalized;
 
-        Vector2 targetPosition = target.position;
-        Vector2 direction = (targetPosition - rb.position).normalized;
+        // 計算角度（轉成度數）
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Apply force toward target object
-        rb.AddForce(direction * forceAmount);
+        // 平滑旋轉朝向目標方向
+        Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * rotateSpeed);
     }
 }
