@@ -446,7 +446,7 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.067227446, y: -0.68940514}
   m_ConnectedAnchor: {x: 0.05593896, y: 0.18356729}
   m_UseConnectedAnchor: 1
@@ -1394,7 +1394,7 @@ GameObject:
   - component: {fileID: 765978964}
   - component: {fileID: 765978963}
   - component: {fileID: 765978967}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: shovel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2425,7 +2425,7 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.03399998, y: -0.301}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_UseConnectedAnchor: 1
@@ -2808,12 +2808,12 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.5157694, y: 1.0350809}
   m_ConnectedAnchor: {x: 1.1547694, y: 0.2720809}
-  m_UseConnectedAnchor: 1
+  m_UseConnectedAnchor: 0
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 100
@@ -3012,7 +3012,7 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.06018349, y: -0.703232}
   m_ConnectedAnchor: {x: -0.06405103, y: 0.16844508}
   m_UseConnectedAnchor: 1
@@ -3439,7 +3439,7 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.05699995, y: -0.59}
   m_ConnectedAnchor: {x: -0.000000059584643, y: -0.0000000015438129}
   m_UseConnectedAnchor: 1
