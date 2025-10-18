@@ -38,7 +38,7 @@ public class stamina : MonoBehaviour
         Debug.Log("Stamina ¤w¯ÓºÉ");
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("bo");
         if (collision.gameObject.CompareTag("Buff"))
