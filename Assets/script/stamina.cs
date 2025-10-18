@@ -44,7 +44,7 @@ public class stamina : MonoBehaviour
         if (collision.gameObject.CompareTag("Buff"))
         {
             Debug.Log("¦Y¤g!");
-            player_stamina = Mathf.Max(0, player_stamina +5);
+            player_stamina = Mathf.Clamp(player_stamina +5,0,1000);
 
         }
 
