@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      origin-logo-removebg-preview_0: -363659624864929654
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
