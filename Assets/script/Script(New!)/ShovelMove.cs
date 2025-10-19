@@ -1,9 +1,12 @@
+using System.Diagnostics;
 using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
 public class FollowTargetPhysics : MonoBehaviour
 {
+
     public Rigidbody2D shovelrb;
     public CollisionDetector Collidebool;
     public Transform target;          // Assign target GameObject's Transform here
@@ -19,10 +22,11 @@ public class FollowTargetPhysics : MonoBehaviour
     {
         if (Collidebool.isColliding)
         {
-            //Debug.Log("Slowing down!!!!!");
-            shovelrb.linearVelocity = shovelrb.linearVelocity * 0.01f;
+            UnityEngine.Debug.Log("Slowed");
+
+            // Freeze in place for a few frames
+           
         }
-        if (target == null) return;
 
         Vector2 targetPosition = target.position;
 
@@ -30,4 +34,5 @@ public class FollowTargetPhysics : MonoBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
     }
+     
 }

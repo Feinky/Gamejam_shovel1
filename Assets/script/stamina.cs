@@ -1,12 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class stamina : MonoBehaviour
 {
-    public int player_stamina = 500;
-    public int max = 500;
+    public int player_stamina = 1000;
+    public int max = 1000;
     public Slider staminaSlider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,15 +35,10 @@ public class stamina : MonoBehaviour
             player_stamina = Mathf.Max(0, player_stamina - 1);
             Debug.Log("Stamina: " + player_stamina);
         }
-
-        if(player_stamina == 0)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
         Debug.Log("Stamina ¤w¯ÓºÉ");
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("bo");
         if (collision.gameObject.CompareTag("Buff"))
