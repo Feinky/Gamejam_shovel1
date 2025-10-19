@@ -1239,9 +1239,17 @@ PrefabInstance:
       value: 'player '
       objectReference: {fileID: 0}
     - target: {fileID: 9095320934801308554, guid: 9285996094867504dbd7cb537d31919c, type: 3}
+      propertyPath: max
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095320934801308554, guid: 9285996094867504dbd7cb537d31919c, type: 3}
       propertyPath: staminaSlider
       value: 
       objectReference: {fileID: 653546393}
+    - target: {fileID: 9095320934801308554, guid: 9285996094867504dbd7cb537d31919c, type: 3}
+      propertyPath: player_stamina
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
