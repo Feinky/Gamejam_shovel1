@@ -32,8 +32,9 @@ public class GameTimer : MonoBehaviour
     // °»´ú¸I¨ì Finish
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Finish"))
+        if (collision.gameObject.CompareTag("Finish"))
         {
+            Debug.Log("Endgame");
             EndGame();
         }
     }
