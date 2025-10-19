@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class stamina : MonoBehaviour
 {
-    public int player_stamina = 1000;
-    public int max = 1000;
+    public int player_stamina = 100;
+    public int max = 100;
     public Slider staminaSlider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
