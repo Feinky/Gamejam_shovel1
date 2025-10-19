@@ -119,6 +119,69 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &251588080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3021189843559260394, guid: 3165919d73a00494e82b899e695cdbc5, type: 3}
+  m_PrefabInstance: {fileID: 7381901087443589280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!68 &251588085
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251588080}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.553627, y: -1.6892397}
+  - {x: -2.4297256, y: -1.6657124}
+  - {x: -1.7066784, y: -1.3811809}
+  - {x: -1.4974709, y: -1.2322539}
+  - {x: -1.3817368, y: -0.586833}
+  - {x: -1.8365345, y: 0.21601158}
+  - {x: -1.9546146, y: 0.5752928}
+  - {x: -1.8476295, y: 1.7680283}
+  - {x: -1.6968441, y: 2.0751252}
+  - {x: -0.99931717, y: 2.408238}
+  - {x: 0.47725296, y: 2.3035412}
+  - {x: 0.85227585, y: 1.5491158}
+  - {x: 0.8813667, y: 0.008648515}
+  - {x: 0.3759308, y: -1.052361}
+  - {x: 0.40285492, y: -1.5034443}
+  - {x: 2.2360344, y: -1.9128714}
+  - {x: 2.5268135, y: -2.1316586}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &411031008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,6 +2090,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3021189843559260394, guid: 3165919d73a00494e82b899e695cdbc5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 251588085}
     - targetCorrespondingSourceObject: {fileID: 5970694790756059787, guid: 3165919d73a00494e82b899e695cdbc5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 948693958}
