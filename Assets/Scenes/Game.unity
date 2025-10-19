@@ -992,6 +992,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1718624069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1428390412990055212, guid: 9285996094867504dbd7cb537d31919c, type: 3}
+  m_PrefabInstance: {fileID: 4218726807777694400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1718624079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718624069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc5111835464304083d2602a1448d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1028661915}
+  timerText: {fileID: 553209894}
+  timeElapsed: 0
+  isGameEnd: 0
 --- !u!1 &1728484098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1149,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6661998995102957412, guid: 9285996094867504dbd7cb537d31919c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661998995102957412, guid: 9285996094867504dbd7cb537d31919c, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 553209894}
@@ -1138,7 +1163,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1428390412990055212, guid: 9285996094867504dbd7cb537d31919c, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1718624079}
   m_SourcePrefab: {fileID: 100100000, guid: 9285996094867504dbd7cb537d31919c, type: 3}
 --- !u!1001 &7381901087443589280
 PrefabInstance:
