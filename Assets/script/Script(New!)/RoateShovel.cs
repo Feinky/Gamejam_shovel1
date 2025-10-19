@@ -6,7 +6,7 @@ public class RotateOnClick : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // 0 = left click
+        if (Input.GetMouseButtonDown(1)) // 0 = left click
         {
             transform.Rotate(0f, 0f, rotationAngle);
         }
