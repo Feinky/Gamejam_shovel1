@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering;
 
 public class AccessGetPositions : MonoBehaviour
 {
@@ -42,20 +43,21 @@ public class AccessGetPositions : MonoBehaviour
             float angleRadians = correctedAngleDegrees * Mathf.Deg2Rad;
 
             Vector2 forceDirection = new Vector2(-Mathf.Cos(angleRadians), Mathf.Sin(angleRadians));
-
-            // ✅ Apply main directional force
-            rb.AddForce(forceDirection * currentForce * 10);
-
-            // ✅ Apply horizontal boost if force > 5
-            if (currentForce > 5f)
+            if (angleRadians > 0 && angleRadians < 1.4 || angleRadians > 4.4 && angleRadians < 6)
             {
-                // Add a horizontal "boost" — can tweak boostMultiplier
-                float boostMultiplier = 500f;
-                Vector2 horizontalBoost = new Vector2(forceDirection.x * currentForce * boostMultiplier, 0f);
-                rb.AddForce(horizontalBoost, ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(currentForce * -1f * 200, 0f), ForceMode2D.Force); // push right
+                Debug.Log("Pushing right");
 
-                Debug.Log($"Boost applied! Force={currentForce}, Boost={horizontalBoost}");
             }
+            if (angleRadians > 1.4 && angleRadians < 4.4)
+            {
+                rb.AddForce(new Vector2(currentForce * 1f * 200, 0f), ForceMode2D.Force); // push right
+                Debug.Log("Pushing left");
+            }
+                // ✅ Apply main directional force
+                rb.AddForce(forceDirection * currentForce * 20);
+
+             
         }
     }
 }
