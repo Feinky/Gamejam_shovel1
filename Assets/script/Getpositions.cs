@@ -39,7 +39,7 @@ public class GetPositions : MonoBehaviour
         Vector2 posB = new Vector2(objectB.transform.position.x, objectB.transform.position.y);
 
         // Update the public field, do NOT re-declare it locally
-        force = ((posA.x - posB.x) * 10* (posA.x - posB.x) + (posA.y - posB.y) * (posA.y - posB.y)) / 2f;
+        force = ((posA.x - posB.x) * (posA.x - posB.x) + (posA.y - posB.y) * (posA.y - posB.y));
 
         //Debug.Log("Object A Position: " + posA + ", Object B Position: " + posB + ", Force: " + force);
     }

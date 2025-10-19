@@ -55,7 +55,7 @@ public class AccessGetPositions : MonoBehaviour
                 Debug.Log("Pushing left");
             }
                 // ✅ Apply main directional force
-                rb.AddForce(forceDirection * currentForce * 20);
+                rb.AddForce(forceDirection * currentForce * 25);
 
              
         }
