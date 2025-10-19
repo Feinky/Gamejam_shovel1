@@ -71,11 +71,12 @@ public class AccessGetPositions : MonoBehaviour
             float angleRadians = correctedAngleDegrees * Mathf.Deg2Rad;
 
             // Calculate force direction vector using corrected angle
-            Vector2 forceDirection = new Vector2(Mathf.Cos(angleRadians), Mathf.Sin(angleRadians));
+            Vector2 forceDirection = new Vector2(-Mathf.Cos(angleRadians), Mathf.Sin(angleRadians));
+
             // Flip X direction to reverse left and right force
-            forceDirection.x = -forceDirection.x * 500;
+             
             // Apply force along the corrected direction, scaled by force magnitude
-            rb.AddForce(forceDirection * currentForce * 5);
+            rb.AddForce(forceDirection * currentForce * 10);
 
             //Debug.Log($"Applied force {currentForce} in direction {forceDirection} (angle corrected: {correctedAngleDegrees} degrees)");
         }
