@@ -1076,6 +1076,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 716755172695558192, guid: 9285996094867504dbd7cb537d31919c, type: 3}
+      propertyPath: attackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cafb46e36cb29c04fac41a29daaaf06b, type: 3}
+    - target: {fileID: 716755172695558192, guid: 9285996094867504dbd7cb537d31919c, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 431193533}
+    - target: {fileID: 716755172695558192, guid: 9285996094867504dbd7cb537d31919c, type: 3}
       propertyPath: staminaSlider
       value: 
       objectReference: {fileID: 653546393}
