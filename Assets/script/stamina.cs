@@ -1,12 +1,16 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class stamina : MonoBehaviour
 {
-    public int player_stamina = 100;
-    public int max = 100;
+    public int player_stamina = 200;
+    public int max = 200;
     public Slider staminaSlider;
+
+    public AudioSource audioSource;
+    public AudioClip attackSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,6 +40,7 @@ public class stamina : MonoBehaviour
             Debug.Log("Stamina: " + player_stamina);
         }
         Debug.Log("Stamina ¤w¯ÓºÉ");
+        SceneManager.LoadScene("GameOver");
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -44,14 +49,15 @@ public class stamina : MonoBehaviour
         if (collision.gameObject.CompareTag("Buff"))
         {
             Debug.Log("¦Y¤g!");
-            player_stamina = Mathf.Clamp(player_stamina +5,0,1000);
-
+            player_stamina = Mathf.Clamp(player_stamina +5,0,200);
+            audioSource.PlayOneShot(attackSound);
         }
 
         if (collision.gameObject.CompareTag("Debuff"))
         {
             Debug.Log("¦Y«Ë!");
-            player_stamina = Mathf.Max(0, player_stamina - 20);
+            player_stamina = Mathf.Max(0, player_stamina - 3);
+            audioSource.PlayOneShot(attackSound);
         }
     }
 }

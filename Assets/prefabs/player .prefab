@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 4947156691526155927}
   - component: {fileID: 22214362166059731}
   - component: {fileID: 5164027957191865909}
+  - component: {fileID: 716755172695558192}
   - component: {fileID: 7637064923898052227}
   - component: {fileID: 5671746323080673798}
   - component: {fileID: 26618755949206256}
@@ -114,6 +115,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isColliding: 0
+--- !u!114 &716755172695558192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428390412990055212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a155e2c83cd934b499c7320518319ca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_stamina: 100
+  max: 100
+  staminaSlider: {fileID: 0}
 --- !u!212 &7637064923898052227
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1300,7 +1316,6 @@ GameObject:
   m_Component:
   - component: {fileID: 759586406944068499}
   - component: {fileID: 5956518111968012175}
-  - component: {fileID: 9095320934801308554}
   - component: {fileID: 6661998995102957412}
   m_Layer: 0
   m_Name: 'player '
@@ -1344,21 +1359,6 @@ MonoBehaviour:
   objectA: {fileID: 1428390412990055212}
   objectB: {fileID: 6497902787716829447}
   force: 0
---- !u!114 &9095320934801308554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769090057057464594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a155e2c83cd934b499c7320518319ca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player_stamina: 1000
-  max: 1000
-  staminaSlider: {fileID: 0}
 --- !u!114 &6661998995102957412
 MonoBehaviour:
   m_ObjectHideFlags: 0

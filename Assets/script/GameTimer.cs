@@ -35,7 +35,14 @@ public class GameTimer : MonoBehaviour
     {
         isGameOver = true;
         finalTime = timeElapsed;
-        // 切換到 GameOver scene（假設名字是 "GameOver"）
         SceneManager.LoadScene("GameEnd");
+    }
+
+    private void dead(Transform transform)
+    {
+        if (transform.position.y < 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
